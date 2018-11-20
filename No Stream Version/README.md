@@ -2,37 +2,7 @@
 
 When downloading this source / cloning in Git, you must download [this weights file](https://drive.google.com/open?id=0B_IDNqlxDXtKdUw0SEFqNFFlZHM), and put it in a folder you create called "weights" (this folder should be alongside the "examples" folder).
 
-### Currently In-Progress:
-
-- [x] Test delay via ping
-    - [x] Output delays to .csv
-- ~~[ ] Convert Flask server & client to UDP~~
-- [x] Implement means of comparing overall processing times
-- [ ] Compare processing times across multiple GPUs and devices
-- [x] Document results, changes, quantitative data, etc.
-- [ ] Convert to a C++ Code-base
-
-### Completed:
-
-- [x] Thorough field testing.
-- [x] Friendly file naming (`FlaskServer.py` and `main.py` aren't good names)
-- [x] Friendly launch arguments for server to include IPs in the args themselves
-- [x] New Client-Server model: 2 Clients -> 1 Server
-- [x] Remove lane detection; we only track vehicles
-- [x] Dynamic object detection based on weights
-- [x] General code cleanup
-- [x] Implementation of live client to server video detection
-- [x] Implementation of nested video / picture-in-picture
-
-### Long-Term Goals:
-
-- ~~[ ] Implementation with SIM Center Server~~
-- ~~[ ] Object Detection using CNN:~~
-    - ~~[ ] Car Detection~~
-    - ~~[ ] Pedestrian Detection~~
-- ~~[ ] Image Edge Smoothing~~
-- ~~[ ] Dynamic Image Segmentation~~
-- [x] Testing & Experimentation
+## This is a custom sub-version of the USIgnite code that requires NO intercommunication between multiple client computers; this is only ideal for **testing**!
 
 
 ## Setup:
@@ -46,6 +16,7 @@ Setting up a development workspace is a _very specific_ process, so be sure to f
 - CUDA
 - OpenCV3
 - TensorFlow
+- Flask
 
 **Installation Process:**
 
@@ -73,6 +44,7 @@ Setting up a development workspace is a _very specific_ process, so be sure to f
 
     **On Windows / macOS:** `conda install --channel https://conda.anaconda.org/menpo opencv3`
 
+9. Install Flask: `conda install -c anaconda flask=0.12.2`
 
 Trying to maintain multiple versions of Python is going to be a headache and is not recommended (or necessary).
 

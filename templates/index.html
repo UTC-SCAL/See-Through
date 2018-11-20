@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	<title>AIO Locator</title>
+	<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR_ZVn_RWxs02qFAiwfwHrBVQbDj7osJU"></script>
+	<script src="./my-app.js"></script>
+  	<style>
+		h1 {
+			font-family: "Helvetica"
+		}
+		#bg {
+			max-width: 50%
+		}
+  	</style>
+  </head>
+  <body>
+
+    <h1>Video Streaming Demonstration</h1>
+    <img id="bg" src="{{ url_for('video_feed') }}">
+  </body>
+</html>
